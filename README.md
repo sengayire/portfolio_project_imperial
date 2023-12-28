@@ -1,32 +1,20 @@
-# PROJECT TITLE 
-
 # Music recommendation system
 
-## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
-<!-- 100 words to explain what your project is about to a general audience.  -->
-
+## NON-TECHNICAL EXPLANATION
 This project is designed to enhance music discovery by recommending songs based on user preferences. Leveraging the expansive Spotify dataset covering tracks from 1921 to 2020, the system offers personalized song suggestions. Whether you input a favorite song or express your musical taste, the algorithm identifies and suggests the top 10 similar songs. This recommendation system aims to make music exploration enjoyable and effortless, providing users with a curated selection that aligns with their unique musical inclinations.
 
 ## DATA
-<!-- A summary of the data you’re using, remembering to include where you got it and any relevant citations.  -->
-
-### Dataset Overview
-
-#### Source
 This project leverages a publicly available dataset from Spotify, enriched further using Spotipy, a Python client for the Spotify Web API. Spotipy facilitates easy data fetching and querying of Spotify's extensive catalog for songs.
 
-#### Features Description
+### Features Description
 
 1. **track_id:**
    The Spotify ID for the track.
 
 2. **artists:**
-   Names of the artists who performed the track. Multiple artists are separated by a semicolon (;).
+   Names of the artists who performed the track. Multiple artists are separated by a comma(,).
 
-3. **album_name:**
-   The album name in which the track appears.
-
-4. **track_name:**
+4. **name:**
    Name of the track.
 
 5. **popularity:**
@@ -36,7 +24,7 @@ This project leverages a publicly available dataset from Spotify, enriched furth
    The track length in milliseconds.
 
 7. **explicit:**
-   Indicates whether the track has explicit lyrics (true = yes; false = no or unknown).
+   Indicates whether the track has explicit lyrics (true = 1; false = 0).
 
 8. **danceability:**
    Describes the suitability of a track for dancing based on tempo, rhythm stability, beat strength, and overall regularity. Ranges from 0.0 (least danceable) to 1.0 (most danceable).
@@ -45,7 +33,7 @@ This project leverages a publicly available dataset from Spotify, enriched furth
    Represents perceptual intensity and activity, ranging from 0.0 to 1.0. High energy suggests a fast, loud, and noisy track.
 
 10. **key:**
-    Represents the key the track is in, mapped to pitches using standard Pitch Class notation. -1 indicates no detected key.
+    Represents track's key, mapped to pitches using standard Pitch Class notation. -1 indicates no detected key.
 
 11. **loudness:**
     Overall loudness of a track in decibels (dB).
@@ -71,18 +59,17 @@ This project leverages a publicly available dataset from Spotify, enriched furth
 18. **tempo:**
     Estimated tempo of a track in beats per minute (BPM).
 
-19. **time_signature:**
-    An estimated time signature indicating the number of beats in each bar, ranging from 3 to 7.
+19. **release_date:**
+    The tracks release year
 
-20. **track_genre:**
-    The genre to which the track belongs.
+20. **duration_ms:**
+    The duration of a song in a milliseconds.
 
-#### Citation
-Please note that the Spotify dataset and Spotipy library are publicly available resources, and appropriate credit and adherence to their terms of use are recommended. Refer to the official Spotify API documentation and Spotipy documentation for more details.
+### Citation
+Please note that the Spotify dataset and Spotipy library are publicly available resources, and appropriate credit and adherence to their terms of use are recommended. Refer to the official [Spotify](https://developer.spotify.com/documentation/web-api) API documentation and [Spotipy](https://spotipy.readthedocs.io/en/2.22.1/) documentation for more details.
+
 
 ## MODEL 
-<!-- A summary of the model you’re using and why you chose it.  -->
-
 The model employed in this project is a content-based filtering recommender system utilizing cosine distances, which aligns with a content-based recommendation approach. The utilization of cosine distance signifies that the system suggests songs with feature vectors closely resembling the central song, thereby implementing a similarity-based recommendation strategy. This approach enhances the relevance of recommendations by focusing on the inherent characteristics and attributes of the songs, contributing to a more personalized and accurate recommendation system.
 
 ## HYPERPARAMETER OPTIMSATION
@@ -101,8 +88,7 @@ The model is evaluated using the best hyperparameters on both the training and t
 
 ## RESULTS
 
-## Hyperparameter Optimization using Grid Search
-
+### Hyperparameter Optimization using Grid Search
 During the hyperparameter tuning process for the DecisionTreeRegressor, an exhaustive GridSearch was performed to identify the optimal set of hyperparameters. The goal was to enhance the model's predictive performance by systematically exploring various combinations of hyperparameter values.
 
 The search space included parameters such as 'max_depth,' 'max_features,' 'max_leaf_nodes,' 'min_samples_leaf,' and 'min_samples_split.' The grid search yielded the following optimal hyperparameter configuration:
@@ -113,13 +99,12 @@ The search space included parameters such as 'max_depth,' 'max_features,' 'max_l
 
 These hyperparameters represent the configuration that resulted in the best model performance according to the chosen evaluation metric.
 
-## Performance Metrics with Optimized Hyperparameters
-
+### Performance Metrics with Optimized Hyperparameters
 After applying the determined optimal hyperparameters to the DecisionTreeRegressor, the model's performance was assessed using key metrics. The following results were obtained:
 
-- **Mean Absolute Error (MAE):** 0.069
-- **R2 Score (Training Data):** 0.802
-- **R2 Score (Test Data):** 0.797
+- **Mean Absolute Error (MAE):** 0.06
+- **R2 Score (Training Data):** 0.80
+- **R2 Score (Test Data):** 0.79
 
 These metrics provide insights into the model's accuracy, capturing both the absolute error and the explained variance in the training and test datasets. The achieved values showcase the effectiveness of the hyperparameter optimization process in enhancing the overall performance of the DecisionTreeRegressor.
 
@@ -129,6 +114,11 @@ These metrics provide insights into the model's accuracy, capturing both the abs
 # Training data result 
 ![Screenshot](decisionTree-training.png)
 
-## (OPTIONAL: CONTACT DETAILS)
-If you are planning on making your github repo public you may wish to include some contact information such as a link to your twitter or an email address. 
+# (CONTACT DETAILS)
+[GitHub repo](https://github.com/sengayire/portfolio_project_imperial)
+
+[LinkedIn](https://www.linkedin.com/in/princesengayire/) 
+
+Email: psengayire@gmail.com
+
 

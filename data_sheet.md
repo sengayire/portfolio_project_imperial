@@ -8,10 +8,11 @@ The dataset was created to empower the development and enhancement of a sophisti
 - **Creators:** 
 The dataset was curated and maintained by the Spotify Data Science team, working on behalf of Spotify, a leading music streaming platform. The creation of the dataset was funded by Spotify.
 
+
 ## Composition
 
 - **Representation:** 
-The dataset encompasses Spotify tracks, covering a diverse array of 125 genres. Each track is extensively characterized by audio features, including track-specific identifiers (track_id), artist information, album details, track name, popularity, duration, explicit content, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, time signature, and track genre.
+The dataset encompasses Spotify tracks, covering a diverse array of 125 genres. Each track is extensively characterized by audio features, including track-specific identifiers (id), artist(s) name(s), track name, popularity, duration, explicit, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, release date.
 - **Instance Count:** 
 The dataset contains 169k of instances, with each instance representing a unique track in Spotify's expansive library..
 
@@ -21,16 +22,18 @@ The dataset is meticulously maintained, and there are no missing values, ensurin
 - **Confidentiality:** 
 The dataset does not contain data that can be considered confidential. User-specific information is anonymized to ensure privacy.
 
+
 ## Collection Process
 
-- **Data Acquisition:** 
-User interactions were collected through various channels, including streaming history, playlist creation, and explicit user feedback.
+- **Data Acquisition:**
+  The dataset comprises songs exclusively sourced from the Spotify database, encompassing a spectrum of tracks released between the 1921 and 2020. This collection offers a diverse representation of music available on the Spotify platform, reflecting real-world genres and providing a comprehensive snapshot of musical trends spanning the specified timeframe.
 
 - **Sampling Strategy:** 
-The dataset represents a stratified sample of Spotify users, ensuring a diverse representation of user behaviors and preferences.
+The dataset is derived from a carefully executed stratified sampling approach, guaranteeing a well-rounded representation of diverse genres across the spectrum of Spotify songs. This method ensures that the included tracks provide a comprehensive and balanced reflection of the various musical styles available on the platform.
 
 - **Time Frame:** 
-The data collection spans several years, capturing evolving user preferences and interactions over time.
+The data collection spans multiple years, allowing for the observation of the dynamic evolution of musical tempo over time.
+
 
 ## Preprocessing/Cleaning/Labeling
 
@@ -54,7 +57,7 @@ Consumers should avoid using the dataset for tasks that may result in unfair tre
 ## Distribution
 
 - **Distribution History:** 
-The dataset has been distributed internally within Spotify for research and development purposes. External distribution may be subject to specific agreements and approvals.
+The dataset, curated for research and development purposes, has been made publicly available. Users intending to utilize the dataset are expected to adhere to Spotify's rights and regulations governing its usage.
 
 - **Intellectual Property:** 
 The dataset is subject to Spotify's intellectual property rights and is provided under applicable terms of use. Unauthorized distribution or use is prohibited.
